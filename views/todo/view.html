@@ -1,0 +1,5 @@
+<h3><strong>Address: </strong> {{ currentResource.resource.data.address.formatted_address }}</h3>
+<p1><strong>Notes: </strong> {{ currentResource.resource.data.notes }}</p1></br> </br>
+<map zoom="18" center="[{{ position.lat }}, {{ position.lng }}]">
+  <marker position="[{{ position.lat }}, {{ position.lng }}]" title="{{ currentResource.resource.data.address.formatted_address }}" visible="true"></marker>
+</map>
