@@ -27,7 +27,7 @@
             <tr data-ng-repeat="todo in todos | orderBy:'todo.data.created':reverse | filter:searchText" ng-class="getStatus(todo)">
               <td><a ui-sref="todo.view({todoId: todo._id})">{{ todo.data.address.formatted_address }}</a></td>
               <td>{{ todo.data.county }}</td>
-              <td><span ng-if="!todo.data.status">pending</span><span ng-if="todo.data.status">{{ todo.data.status }}</span></td>
+              <td><span ng-if="!todo.data.status">Pending</span><span ng-if="todo.data.status">{{ todo.data.status }}</span></td>
               <td>{{ todo.created | amDateFormat:'MMMM Do YYYY, h:mm:ss a' }}</td>
               <td>{{ todo.data.email }}</td>
               <td><span ng-if="!todo.data.payment">Due</span><span ng-if="todo.data.payment">{{ todo.data.payment }}</span></td> 
